@@ -14,6 +14,9 @@
 		70889BEC2B14E25E0072AA60 /* CryptoPriceViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70889BEB2B14E25E0072AA60 /* CryptoPriceViewerTests.swift */; };
 		70889BF62B14E25E0072AA60 /* CryptoPriceViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70889BF52B14E25E0072AA60 /* CryptoPriceViewerUITests.swift */; };
 		70889BF82B14E25E0072AA60 /* CryptoPriceViewerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70889BF72B14E25E0072AA60 /* CryptoPriceViewerUITestsLaunchTests.swift */; };
+		70889C062B14E2DE0072AA60 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70889C052B14E2DE0072AA60 /* CryptoModel.swift */; };
+		70889C092B14E5020072AA60 /* CryptoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70889C082B14E5020072AA60 /* CryptoViewModel.swift */; };
+		70889C0C2B14E5910072AA60 /* APIConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70889C0B2B14E5910072AA60 /* APIConnectionService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		707EC4A02B1E59DA0059A5C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		70889BD72B14E2590072AA60 /* CryptoPriceViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoPriceViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70889BDA2B14E2590072AA60 /* CryptoPriceViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPriceViewerApp.swift; sourceTree = "<group>"; };
 		70889BDC2B14E2590072AA60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,9 @@
 		70889BF12B14E25E0072AA60 /* CryptoPriceViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoPriceViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70889BF52B14E25E0072AA60 /* CryptoPriceViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPriceViewerUITests.swift; sourceTree = "<group>"; };
 		70889BF72B14E25E0072AA60 /* CryptoPriceViewerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPriceViewerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		70889C052B14E2DE0072AA60 /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		70889C082B14E5020072AA60 /* CryptoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewModel.swift; sourceTree = "<group>"; };
+		70889C0B2B14E5910072AA60 /* APIConnectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConnectionService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +81,9 @@
 		70889BCE2B14E2590072AA60 = {
 			isa = PBXGroup;
 			children = (
+				70889C0A2B14E5150072AA60 /* Service */,
+				70889C072B14E4DA0072AA60 /* ViewModel */,
+				70889C042B14E2B90072AA60 /* Model */,
 				70889BD92B14E2590072AA60 /* CryptoPriceViewer */,
 				70889BEA2B14E25E0072AA60 /* CryptoPriceViewerTests */,
 				70889BF42B14E25E0072AA60 /* CryptoPriceViewerUITests */,
@@ -94,6 +104,7 @@
 		70889BD92B14E2590072AA60 /* CryptoPriceViewer */ = {
 			isa = PBXGroup;
 			children = (
+				707EC4A02B1E59DA0059A5C8 /* Info.plist */,
 				70889BDA2B14E2590072AA60 /* CryptoPriceViewerApp.swift */,
 				70889BDC2B14E2590072AA60 /* ContentView.swift */,
 				70889BDE2B14E25D0072AA60 /* Assets.xcassets */,
@@ -125,6 +136,30 @@
 				70889BF72B14E25E0072AA60 /* CryptoPriceViewerUITestsLaunchTests.swift */,
 			);
 			path = CryptoPriceViewerUITests;
+			sourceTree = "<group>";
+		};
+		70889C042B14E2B90072AA60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70889C052B14E2DE0072AA60 /* CryptoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		70889C072B14E4DA0072AA60 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				70889C082B14E5020072AA60 /* CryptoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		70889C0A2B14E5150072AA60 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				70889C0B2B14E5910072AA60 /* APIConnectionService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70889C062B14E2DE0072AA60 /* CryptoModel.swift in Sources */,
+				70889C092B14E5020072AA60 /* CryptoViewModel.swift in Sources */,
 				70889BDD2B14E2590072AA60 /* ContentView.swift in Sources */,
 				70889BDB2B14E2590072AA60 /* CryptoPriceViewerApp.swift in Sources */,
+				70889C0C2B14E5910072AA60 /* APIConnectionService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +463,7 @@
 				DEVELOPMENT_TEAM = UHZ6B47G7R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CryptoPriceViewer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -454,6 +493,7 @@
 				DEVELOPMENT_TEAM = UHZ6B47G7R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CryptoPriceViewer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
